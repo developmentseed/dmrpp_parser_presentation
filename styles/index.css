@@ -1,0 +1,437 @@
+@import './devseed.css';
+
+/* Deck-specific styles. All slides use the DevSeed layouts, so these assume
+   white text on DevSeed orange with navy (--ds-highlight) panels. */
+
+.slidev-layout.ds-layout {
+  padding-top: 5.5rem;
+}
+
+/* Subtitle line under a statement slide */
+.slidev-layout.ds-statement p.ds-sub {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 1.5rem;
+  opacity: 0.9;
+}
+
+/* Code blocks: navy panel, small type */
+.slidev-layout.ds-layout pre.shiki,
+.slidev-layout.ds-layout .slidev-code {
+  background: var(--ds-highlight) !important;
+  border-radius: 8px;
+  font-size: 0.62rem !important;
+  line-height: 1.45 !important;
+  padding: 0.7rem 0.9rem !important;
+}
+
+.slidev-layout.ds-layout pre code {
+  background: transparent;
+}
+
+.code-cap {
+  font-size: 0.75rem !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 0.35rem 0 !important;
+  opacity: 0.9;
+}
+
+.code-cap span {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  opacity: 0.85;
+}
+
+/* Navy callout box */
+.ds-callout {
+  padding: 0.55rem 0.9rem;
+  border-radius: 8px;
+  background: var(--ds-highlight);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.ds-callout b,
+.ds-dash b { font-weight: 900; }
+
+/* Dashed white box: the punchline */
+.ds-dash {
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  border: 2px dashed #fff;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Two pipelines that end in the same ManifestStore */
+.flow {
+  display: grid;
+  grid-template-columns: 7.5rem 1.4rem 1fr 1.4rem 9rem;
+  align-items: center;
+  row-gap: 1.1rem;
+  font-size: 0.8rem;
+}
+
+.flow-box {
+  padding: 0.5rem 0.6rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.flow-box code { font-size: 0.72rem; }
+
+.flow-box small {
+  display: block;
+  font-size: 0.66rem;
+  opacity: 0.85;
+}
+
+.flow-file { background: rgba(0, 0, 0, 0.12); }
+.flow-out { background: var(--ds-highlight); border-color: var(--ds-highlight); font-weight: 700; }
+
+.flow-steps {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.flow-steps .flow-box { flex: 1; }
+.flow-steps .flow-arrow { flex: 0 0 auto; }
+
+.flow-arrow {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+/* the chunk scan, wherever it happens */
+.flow-scan {
+  background: #fff;
+  color: var(--ds-orange);
+  border-color: #fff;
+  font-weight: 900;
+}
+
+.flow-scan small { color: var(--ds-dark); font-weight: 400; opacity: 1; }
+
+.flow-label {
+  grid-column: 1 / -1;
+  margin-bottom: -0.7rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.85;
+}
+
+/* Cost ledger: two columns of cost rows, the scan row picked out */
+.ledger {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.ledger-col h3 {
+  font-size: 1rem !important;
+  margin: 0 0 0.45rem 0 !important;
+}
+
+.ledger-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.32rem 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+
+.ledger-row span:last-child {
+  flex: 0 0 auto;
+  opacity: 0.85;
+  font-size: 0.7rem;
+  text-align: right;
+}
+
+.ledger-row.scan {
+  border-radius: 6px;
+  border-bottom: none;
+  background: #fff;
+  color: var(--ds-orange);
+  font-weight: 700;
+}
+
+.ledger-row.scan span:last-child { color: var(--ds-dark); opacity: 1; }
+
+/* Tables in DevSeed style: navy header rule, white row rules */
+.ds-table table { width: 100%; border-collapse: collapse; }
+.slidev-layout.ds-layout .ds-table th {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.4em 0.6em;
+  border-bottom: 2px solid var(--ds-highlight);
+}
+.slidev-layout.ds-layout .ds-table td {
+  font-size: 0.74rem;
+  line-height: 1.35;
+  padding: 0.35em 0.6em;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  font-variant-numeric: tabular-nums;
+}
+
+/* One big number */
+.big-stat {
+  font-size: 5.5rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.big-stat-cap {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+}
+
+/* Lines-of-code bars */
+.loc-row {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr 3.6rem;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.32rem;
+  font-size: 0.72rem;
+}
+
+.loc-row code { font-size: 0.68rem; }
+
+.loc-bar {
+  height: 0.75rem;
+  border-radius: 3px;
+  background: #fff;
+  width: var(--w);
+}
+
+.loc-bar.vz { background: var(--ds-bold); }
+
+.loc-row span:last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Before -> after benchmark rows */
+.bench-after {
+  font-weight: 900;
+  color: var(--ds-bold);
+}
+
+/* Numbered recommendation cards */
+.recs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.rec {
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  background: var(--ds-highlight);
+}
+
+.rec h3 {
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  margin: 0 0 0.3rem 0 !important;
+}
+
+.rec h3 b { color: var(--ds-bold); margin-right: 0.35rem; }
+
+.rec p {
+  font-size: 0.8rem !important;
+  line-height: 1.4;
+  margin: 0 !important;
+}
+
+/* Inline code in headings: keep the heading font, just a navy chip */
+.slidev-layout.ds-layout h2 code {
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 0.9em;
+  padding: 0 0.25em;
+  border-radius: 6px;
+  background: var(--ds-highlight);
+}
+
+/* Inline code on the white "chunk scan" boxes */
+.flow-scan code {
+  background: rgba(207, 63, 2, 0.12) !important;
+  color: var(--ds-orange) !important;
+}
+
+/* Compact bullets beside a code block */
+.vz-points ul { margin-top: 0.7rem; padding-left: 1.1rem; }
+.slidev-layout.ds-layout .vz-points li {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin-bottom: 0.35rem;
+}
+
+/* Duplication slide: what one sidecar is made of */
+.dup-name {
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin: 0.6rem 0 0.25rem;
+}
+
+.dup-bar {
+  display: flex;
+  height: 1.6rem;
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.dup-bar > div {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.dup-meta {
+  width: var(--w);
+  background: #fff;
+  color: var(--ds-orange);
+}
+
+.dup-refs {
+  flex: 1;
+  justify-content: center;
+  background: var(--ds-highlight);
+}
+
+.dup-note {
+  font-size: 0.72rem;
+  margin-top: 0.25rem;
+  opacity: 0.95;
+}
+
+.dup-note b { color: var(--ds-bold); font-weight: 900; }
+
+.dup-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.7rem;
+  font-size: 0.66rem;
+  opacity: 0.9;
+}
+
+.dup-sw {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 2px;
+}
+
+.dup-sw-meta { background: #fff; }
+.dup-sw-refs { background: var(--ds-highlight); margin-left: 0.6rem; }
+
+/* Duplication slide: per-granule sidecars vs. one Zarr array */
+.store {
+  padding: 0.55rem 0.7rem 0.7rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.store-head {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.store-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0.4rem;
+}
+
+/* one sidecar: big white metadata block over a thin navy refs strip */
+.sc {
+  display: flex;
+  flex-direction: column;
+  width: 2.2rem;
+  height: 3.2rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sc i { flex: 87; background: #fff; }
+.sc span { flex: 13; background: var(--ds-highlight); }
+
+.sc-more {
+  align-self: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-left: 0.3rem;
+}
+
+.ic-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 7rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ds-orange);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.ic-meta code { background: transparent !important; color: var(--ds-orange) !important; padding: 0; }
+.ic-meta small { display: block; font-size: 0.6rem; font-weight: 400; color: var(--ds-dark); }
+
+.ic-man {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 3px;
+  padding: 0.35rem 0.45rem;
+  border-radius: 4px;
+  background: var(--ds-highlight);
+}
+
+.ic-man span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 1px;
+  background: var(--ds-bold);
+}
+
+.ic-man small {
+  flex-basis: 100%;
+  font-size: 0.6rem;
+  margin-top: 0.15rem;
+}
+
+/* keep the duplication slide inside the frame */
+.dup-name { margin-top: 0.45rem; }
+.store { padding: 0.45rem 0.6rem 0.55rem; }
+.sc { height: 2.6rem; }
+
+/* Duplication slide: per-collection copy counts */
+.slidev-layout.ds-layout .dup-table td,
+.slidev-layout.ds-layout .dup-table th { font-size: 0.74rem; padding: 0.28em 0.6em; }
+.dup-table strong { color: var(--ds-bold); }

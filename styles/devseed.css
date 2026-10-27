@@ -1,0 +1,109 @@
+/* Development Seed–style slides (for DevSeed speakers' sections).
+   Solid DevSeed orange, heavy white Roboto, key phrases picked out in
+   light blue via **bold**. Looks the same in light and dark mode. */
+
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/700.css';
+@import '@fontsource/roboto/900.css';
+
+:root {
+  --ds-orange: #CF3F02;
+  --ds-dark: #443F3F;
+  --ds-highlight: #0F1E3D; /* navy accent: diagram fills, table rules */
+  --ds-bold: #6AAEF5;      /* **bold** key phrases */
+  --ds-white: #FFFFFF;
+}
+
+.slidev-layout.ds-layout {
+  position: relative;
+  height: 100%;
+  padding: 7rem 4rem 3rem 4rem;
+  background: var(--ds-orange);
+  color: var(--ds-white);
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.slidev-layout.ds-layout .ds-logo {
+  position: absolute;
+  top: 2.25rem;
+  left: 4rem;
+  height: 1.6rem;
+}
+
+/* H1 = small label above the heading */
+.slidev-layout.ds-layout h1 {
+  color: var(--ds-white);
+  opacity: 0.85;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  margin: 0 0 0.6em 0;
+}
+
+/* H2 = heading: heavy, sentence case, tight */
+.slidev-layout.ds-layout h2 {
+  color: var(--ds-white);
+  text-transform: none;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  margin: 0 0 0.7em 0;
+}
+
+.slidev-layout.ds-layout h3,
+.slidev-layout.ds-layout h4 {
+  color: var(--ds-white);
+  font-weight: 700;
+}
+
+.slidev-layout.ds-layout p,
+.slidev-layout.ds-layout li {
+  color: var(--ds-white);
+  font-size: 1.15rem;
+}
+
+/* **bold** = highlighted phrase, as in DevSeed decks */
+.slidev-layout.ds-layout strong {
+  color: var(--ds-bold);
+  font-weight: 900;
+}
+
+.slidev-layout.ds-layout a {
+  color: var(--ds-white);
+  text-decoration: underline;
+}
+
+.slidev-layout.ds-layout code {
+  background: rgba(0, 0, 0, 0.15);
+  color: var(--ds-white);
+}
+
+.slidev-layout.ds-layout table th,
+.slidev-layout.ds-layout table td {
+  color: var(--ds-white);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Statement layout: one big bold line, like a section opener */
+.slidev-layout.ds-layout.ds-statement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.slidev-layout.ds-statement h1 {
+  font-size: 1rem;
+}
+
+.slidev-layout.ds-statement h2,
+.slidev-layout.ds-statement p {
+  font-weight: 900;
+  font-size: 3.4rem;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  max-width: 85%;
+  margin: 0;
+}
